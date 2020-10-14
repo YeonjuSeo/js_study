@@ -1,3 +1,5 @@
-let a=221;
-let b = a-5;
-console.log(b);
+function sayHello(name, age){
+    return `Hello ${name} you are ${age} years old`;
+}
+const greetNicolas = sayHello("Nicolas",15);
+console.log(greetNicolas);
