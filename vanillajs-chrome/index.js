@@ -1,5 +1,4 @@
-function sayHello(name, age){
-    return `Hello ${name} you are ${age} years old`;
-}
-const greetNicolas = sayHello("Nicolas",15);
-console.log(greetNicolas);
+const title = document.querySelector("#title");
+title.innerHTML="Hi! From JS";
+title.style.color = "red";
+document.title = 'I own you now';
