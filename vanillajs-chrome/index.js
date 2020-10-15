@@ -1,13 +1,19 @@
 const title = document.querySelector("#title");
-title.innerHTML="Hi! From JS";
-title.style.color = "red";
-document.title = 'I own you now';
+const BASE_COLOR = "rgb(255, 59, 242)";
+const OTHER_COLOR = "#1abc9c";
 
-function handleResize(){
-    console.log("I have been resized.")
+function handleClick(){
+    const currentColor=title.style.color;
+    if(currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    }
+    else{
+        title.style.color = BASE_COLOR;
+    }
+}
+function init(){
+    title.style.color=BASE_COLOR;
+    title.addEventListener("mouseenter", handleClick);
 }
 
-/*window.addEventLister("resize", handleResize())로 입력한다면?
-resize 되지않아도 바로 함수가 호출됨*/ 
-window.addEventListener("resize", handleResize);
-/*위와 같이 작성한다면 필요할 때(resize되었을 때)에 함수가 호출됨 */
+init();
